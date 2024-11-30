@@ -1,41 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        #searchWidgetTrigger {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <h1>Welcome to Our Search Chatbot</h1>
-        <input placeholder="Search here" id="searchWidgetTrigger" />
-    </div>
+<!-- Widget JavaScript bundle -->
+<script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
 
-    <!-- Widget JavaScript bundle -->
-    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+<!-- Search widget element is not visible by default -->
+<gen-search-widget
+  configId="8a50190d-108d-4716-a56e-40dc72396593"
+  triggerId="searchWidgetTrigger">
+</gen-search-widget>
 
-    <!-- Search widget element -->
-    <gen-search-widget
-        configId="8a50190d-108d-4716-a56e-40dc72396593"
-        triggerId="searchWidgetTrigger">
-    </gen-search-widget>
-</body>
-</html>
+<!-- Element that opens the widget on click. It does not have to be an input -->
+<input placeholder="Search here" id="searchWidgetTrigger" />
